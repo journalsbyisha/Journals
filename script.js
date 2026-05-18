@@ -1,5 +1,5 @@
 const articleFiles = [
-    "First.txt"
+    "first.txt"
 ];
 
 const articlesDiv = document.getElementById("articles");
