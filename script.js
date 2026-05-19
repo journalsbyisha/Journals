@@ -5,7 +5,7 @@ const articles = [
 
     description:"A personal journal about thoughts, feminism, chaos and emotional honesty.",
 
-    image:"https://in.pinterest.com/pin/318629742406788247/visual-search/?x=0&y=33&w=520&h=889&cropSource=9&entrypoint=closeup_cta&rs=pin",
+    image:"https://www.pexels.com/photo/portrait-of-woman-with-hair-covering-her-face-10032500/",
 
     link:"article.html?file=first.txt"
 }
