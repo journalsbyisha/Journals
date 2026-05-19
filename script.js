@@ -1,29 +1,47 @@
-const articleFiles = [
-    "first.txt"
+const articles = [
+
+{
+    title:"Starting of the silent feminist of this age",
+
+    description:"A personal journal about thoughts, feminism, chaos and emotional honesty.",
+
+    image:"https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=1200&auto=format&fit=crop",
+
+    link:"articles/first.txt"
+}
+
 ];
 
 const articlesDiv = document.getElementById("articles");
 
-articleFiles.forEach(file => {
+articles.forEach(article => {
 
-    fetch("articles/" + file)
-    .then(response => response.text())
-    .then(text => {
+articlesDiv.innerHTML += `
 
-        const lines = text.split("\n");
+<div class="article">
 
-        const title = lines[0];
+    <div class="article-image">
 
-        lines.shift();
+        <img src="${article.image}">
 
-        const content = lines.join("<br>");
+    </div>
 
-        articlesDiv.innerHTML += `
-            <div class="article">
-                <h2>${title}</h2>
-                <p>${content}</p>
-            </div>
-        `;
-    });
+    <div class="article-content">
+
+        <h2>${article.title}</h2>
+
+        <p>${article.description}</p>
+
+        <a href="${article.link}" class="read-btn" target="_blank">
+
+            Read Full Article
+
+        </a>
+
+    </div>
+
+</div>
+
+`;
 
 });
