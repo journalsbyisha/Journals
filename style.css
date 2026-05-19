@@ -7,253 +7,150 @@
 }
 
 body{
-
     font-family:'Poppins',sans-serif;
-
-    background:
-    linear-gradient(
-        135deg,
-        #000000,
-        #111111,
-        #1a1a1a
-    );
-
-    color:white;
-
+    background:#000;
+    color:#e7efe7;
     min-height:100vh;
-
     overflow-x:hidden;
 }
 
 /* HEADER */
 
 header{
-
     width:100%;
-
-    padding:30px 7%;
-
-    display:flex;
-
-    justify-content:flex-start;
-
-    align-items:center;
-
+    padding:40px 7%;
 }
 
 .logo{
-
+    display:inline-block;
     border:2px solid #4c614d;
-
-    padding:12px 25px;
-
+    padding:18px 35px;
+    color:#dce7dc;
     font-size:20px;
-
-    letter-spacing:2px;
-
+    letter-spacing:4px;
     text-transform:lowercase;
+    text-decoration:none;
+    transition:0.4s;
+}
 
-    color:#d7e0d7;
-
-    background:rgba(76,97,77,0.15);
-
-    backdrop-filter:blur(10px);
-
+.logo:hover{
+    background:#4c614d;
+    color:#fff;
+    transform:translateY(-3px);
 }
 
 /* ARTICLES AREA */
 
 #articles{
-
     width:100%;
-
     padding:40px 7%;
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:120px;
 }
 
 /* ARTICLE CARD */
 
 .article{
-
-    display:grid;
-
-    grid-template-columns:1fr 1fr;
-
+    display:flex;
     align-items:center;
+    justify-content:space-between;
+    gap:60px;
 
-    gap:70px;
-
+    margin-bottom:120px;
 }
-
-/* REVERSE EVERY SECOND CARD */
 
 .article:nth-child(even){
-
-    direction:rtl;
-}
-
-.article:nth-child(even) .article-content{
-
-    direction:ltr;
+    flex-direction:row-reverse;
 }
 
 /* IMAGE */
 
 .article-image{
-
-    width:100%;
-
-    height:450px;
-
-    border-radius:25px;
-
+    flex:1;
     overflow:hidden;
-
-    position:relative;
-
-    box-shadow:0 15px 40px rgba(0,0,0,0.5);
-
-    transition:0.5s;
+    border-radius:25px;
+    border:1px solid #4c614d;
+    background:#111;
 }
 
 .article-image img{
-
     width:100%;
-
-    height:100%;
-
+    height:420px;
     object-fit:cover;
-
     transition:0.6s;
 }
 
 .article-image:hover img{
-
     transform:scale(1.08);
 }
 
 /* CONTENT */
 
+.article-content{
+    flex:1;
+}
+
 .article-content h2{
-
-    font-size:55px;
-
-    line-height:1.1;
-
+    font-size:52px;
     margin-bottom:30px;
-
     color:#dce7dc;
-
+    line-height:1.1;
 }
 
 .article-content p{
-
-    font-size:22px;
-
+    font-size:20px;
     line-height:1.9;
-
-    color:#cfcfcf;
-
-    margin-bottom:30px;
+    color:#9aa79b;
+    margin-bottom:35px;
 }
 
 /* BUTTON */
 
 .read-btn{
-
     display:inline-block;
-
-    padding:14px 28px;
-
-    border-radius:40px;
-
-    background:#4c614d;
-
-    color:white;
-
+    padding:16px 32px;
+    border:1px solid #4c614d;
+    color:#dce7dc;
     text-decoration:none;
-
     transition:0.4s;
-
-    font-size:18px;
+    letter-spacing:2px;
 }
 
 .read-btn:hover{
-
-    background:#6e8c70;
-
+    background:#4c614d;
     transform:translateY(-4px);
 }
 
 /* FOOTER */
 
 footer{
-
-    margin-top:100px;
-
-    padding:40px;
-
+    padding:60px 20px;
     text-align:center;
-
-    border-top:1px solid rgba(255,255,255,0.1);
-
-    color:#aaaaaa;
-
-    font-size:16px;
+    color:#7c897d;
+    border-top:1px solid #1d1d1d;
+    margin-top:80px;
 }
 
-/* RESPONSIVE */
+/* MOBILE */
 
-@media(max-width:950px){
+@media(max-width:900px){
 
     .article{
-
-        grid-template-columns:1fr;
-
-    }
-
-    .article:nth-child(even){
-
-        direction:ltr;
+        flex-direction:column !important;
+        gap:35px;
     }
 
     .article-content h2{
-
-        font-size:40px;
+        font-size:36px;
     }
 
     .article-content p{
-
         font-size:18px;
     }
 
-    .article-image{
-
+    .article-image img{
         height:300px;
     }
 
-}
-
-@media(max-width:600px){
-
-    #articles{
-
-        padding:20px;
-    }
-
-    .article-content h2{
-
-        font-size:32px;
-    }
-
     .logo{
-
         font-size:15px;
     }
-
 }
