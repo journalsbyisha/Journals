@@ -7,7 +7,7 @@ const articles = [
 
     image:"https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=1200&auto=format&fit=crop",
 
-    link:"articles/first.txt"
+    link:"article.html?file=first.txt""
 }
 
 ];
