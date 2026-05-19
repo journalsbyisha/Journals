@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:
+    linear-gradient(
+        135deg,
+        #000000,
+        #111111,
+        #1c241c
+    );
+
+    color:white;
+
+    min-height:100vh;
+
+    overflow-x:hidden;
+}
+
+/* HEADER */
+
+header{
+
+    width:100%;
+
+    padding:30px 6%;
+}
+
+.logo{
+
+    text-decoration:none;
+
+    color:#dfe8df;
+
+    border:2px solid #4c614d;
+
+    padding:12px 25px;
+
+    display:inline-block;
+
+    background:rgba(76,97,77,0.15);
+
+    backdrop-filter:blur(10px);
+
+    letter-spacing:2px;
+
+    text-transform:lowercase;
+
+    transition:0.4s;
+}
+
+.logo:hover{
+
+    background:#4c614d;
+}
+
+/* MAIN */
+
+main{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    padding:20px;
+}
+
+/* ARTICLE BOX */
+
+.article-container{
+
+    width:100%;
+
+    max-width:1200px;
+
+    background:rgba(255,255,255,0.05);
+
+    border:1px solid rgba(255,255,255,0.08);
+
+    border-radius:25px;
+
+    padding:70px;
+
+    backdrop-filter:blur(15px);
+
+    animation:fadeIn 1s ease;
+}
+
+/* TITLE */
+
+#article-title{
+
+    font-size:60px;
+
+    line-height:1.1;
+
+    margin-bottom:50px;
+
+    color:#dce7dc;
+}
+
+/* CONTENT */
+
+#article-content{
+
+    font-size:24px;
+
+    line-height:2;
+
+    color:#d0d0d0;
+}
+
+/* FOOTER */
+
+footer{
+
+    margin-top:80px;
+
+    padding:40px;
+
+    text-align:center;
+
+    border-top:1px solid rgba(255,255,255,0.08);
+
+    color:#aaaaaa;
+}
+
+/* ANIMATION */
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .article-container{
+
+        padding:35px;
+    }
+
+    #article-title{
+
+        font-size:38px;
+    }
+
+    #article-content{
+
+        font-size:18px;
+        line-height:1.9;
+    }
+
+}
+
+@media(max-width:500px){
+
+    #article-title{
+
+        font-size:30px;
+    }
+
+}
