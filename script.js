@@ -7,7 +7,7 @@ const articles = [
 
     image:"https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=1200&auto=format&fit=crop",
 
-    link:"article.html?file=first.txt""
+    link:"article.html?file=first.txt"
 }
 
 ];
@@ -32,7 +32,7 @@ articlesDiv.innerHTML += `
 
         <p>${article.description}</p>
 
-        <a href="${article.link}" class="read-btn" target="_blank">
+        <a href="${article.link}" class="read-btn">
 
             Read Full Article
 
