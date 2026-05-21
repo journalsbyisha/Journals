@@ -5,7 +5,7 @@ const articles = [
 
     description:"A personal journal about thoughts, feminism, chaos and emotional honesty.",
 
-    image:"https://www.pexels.com/photo/portrait-of-woman-with-hair-covering-her-face-10032500/",
+    image:"https://images.pexels.com/photos/10032500/pexels-photo-10032500.jpeg",
 
     link:"article.html?file=first.txt"
 }
@@ -22,7 +22,7 @@ articlesDiv.innerHTML += `
 
     <div class="article-image">
 
-        <img src="${article.image}">
+        <img src="${article.image}" alt="${article.title}">
 
     </div>
 
